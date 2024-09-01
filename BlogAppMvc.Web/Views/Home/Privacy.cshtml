@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "Our Story";
+}
+<h1>@ViewData["Title"]</h1>
+
+@{
+    ViewBag.Title = "Hakkımızda - Evolve";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Eğer bir layout kullanıyorsanız, layout yolunu belirtin.
+}
+
+<style>
+    .about-section {
+        position: relative;
+        width: 100%;
+        height: 100vh; /* Sayfanın tamamını kaplasın */
+        background-image: url('/img/aboutus.webp'); /* Görselin yolunu belirtin */
+        background-size: cover;
+        background-position: center;
+        color: white; /* Yazıların okunaklı olması için beyaz renk */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Yazıların daha belirgin olması için gölge */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .about-content {
+        max-width: 800px; /* İçeriğin genişliği */
+        text-align: center; /* Yazıları ortala */
+        background-color: rgba(0, 0, 0, 0.5); /* Yazının arkasına yarı saydam bir siyah arka plan */
+        padding: 20px;
+        border-radius: 10px; /* Köşeleri yuvarlak yap */
+    }
+
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1.2em;
+        line-height: 1.6;
+    }
+</style>
+
+<div class="about-section">
+    <div class="about-content">
+        <h1>Hakkımızda</h1>
+        <p>
+            Evolve, bireylerin ve toplulukların sürekli gelişimini ve potansiyellerini keşfetmelerini destekleyen bir platformdur. Amacımız, her bireyin benzersiz yeteneklerini ve ilgi alanlarını en iyi şekilde kullanabilmesi için gereken kaynakları ve araçları sunmaktır.
+        </p>
+        <p>
+            Kurulduğumuz günden bu yana, eğitim, kariyer gelişimi ve kişisel gelişim alanlarında zengin içerik ve rehberlik sunuyoruz. Evolve olarak, bireylerin kendilerini keşfetmelerini, hedeflerini belirlemelerini ve bu hedeflere ulaşmalarını sağlamak için yenilikçi çözümler geliştirmeye devam ediyoruz.
+        </p>
+        <p>
+            Misyonumuz, bilgiye erişimi demokratikleştirmek ve her bireyin kendi yolculuğunda ilerlemesine yardımcı olmaktır. Evolve, öğrenme sürecini hem eğlenceli hem de etkili hale getirmeyi hedefleyen bir platformdur. Kendi hızınızda ve kendi tarzınızda öğrenmenize olanak tanır, bu sayede her zaman ve her yerde yeni beceriler kazanabilirsiniz.
+        </p>
+        <p>
+            Değerlerimiz arasında sürekli öğrenme, topluluk odaklılık ve yenilikçilik yer almaktadır. Evolve'da, herkesin öğrenme sürecinde birlikte ilerleyebileceği bir topluluk oluşturmayı amaçlıyoruz. Gelişim yolculuğunuzda size rehberlik edecek uzmanlarımız ve eğitmenlerimizle yanınızdayız.
+        </p>
+        <p>
+            Gelin, Evolve ile kendi potansiyelinizi keşfedin ve sınırlarınızı yeniden tanımlayın.
+        </p>
+    </div>
+</div>
+

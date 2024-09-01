@@ -1,0 +1,42 @@
+﻿@model ArticleTopicVM
+
+@{
+    ViewData["Title"] = "Index";
+}
+<a asp-controller="Topic" asp-action="Create" class="btn mt-5"><i class="bi bi-plus-lg"></i></a>
+<a class="btn mt-5" asp-action="Index" asp-route-id="0">For you</a>
+<a class="btn mt-5" asp-controller="Topic" asp-action="Index">Following</a>
+@foreach (var item in Model.Topics)
+{
+    <a asp-action="Index" asp-route-id="@item.Id" class="btn mt-5">@item.Name</a>
+}
+<hr />
+<table class="table">
+    
+    <tbody>
+        @foreach (var item in Model.Articles)
+        {
+            
+                <div class="card mb-3" style="max-height: 200px">
+                    <div class="row g-0">
+                        <div class="col-12 text-dark">
+                            <a asp-area="" asp-controller="Account" asp-action="Update" class="btn">
+                            @Html.DisplayFor(modelItem => item.AuthorId)
+                            </a>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body">
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn"><h5 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h5></a>
+                                
+                                <p class="card-text text-truncate" style="max-width: 500px">@Html.DisplayFor(modelItem => item.Content)</p>
+                                <p class="card-text"><small class="text-body-secondary">@Html.DisplayFor(modelItem => item.ReadingTime) minutes reading time</small></p>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <img src="https://placehold.co/150x100" class="img-fluid rounded-start" alt="...">
+                        </div>
+                    </div>
+                </div>
+        }
+    </tbody>
+</table>
